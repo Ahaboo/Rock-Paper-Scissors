@@ -1,7 +1,8 @@
-import cv2
-import mediapipe as mp
 import socket
+import cv2
 import pickle
+import mediapipe as mp
+import numpy as np
 
 # Function to check if a finger is raised
 def is_finger_raised(hands_module, hand_landmarks, finger_name):
@@ -28,7 +29,7 @@ def start_server():
     # Create a socket for server-client communication
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     # Change IP and Port Here
-    server_socket.bind(('localhost', 4915))
+    server_socket.bind(('localhost', 49156))
     server_socket.listen(1)
 
     print("Waiting for a client to connect...")
